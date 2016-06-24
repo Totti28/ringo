@@ -1,4 +1,6 @@
-## Usage:
+# 猴子偷提也能懂的步驟
+
+## 建置環境
 
 1. `git clone git@github.com:leafwind/ringo.git`
 
@@ -11,3 +13,9 @@ if you don't have virtualenv: `pip install virtualenv`
 4. `. __/bin/activate`
 
 5. `pip install -r requirements.txt`
+
+## 執行
+
+python run_this_first.py
+
+python run_this_for_result.py
