@@ -16,6 +16,6 @@ if you don't have virtualenv: `pip install virtualenv`
 
 ## 執行
 
-`python run_this_first.py`
+1. `python run_this_first.py`
 
-`python run_this_for_result.py`
+2. `python run_this_for_result.py`
