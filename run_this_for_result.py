@@ -34,7 +34,7 @@ e.close()
 from operator import itemgetter
 
 #輸出2011～16的結果＋總平均結果
-
+'''
 #總平均
 bow_year=[]
 for a in range(len(words_all)):
@@ -182,4 +182,23 @@ sorted_final = sorted(bow_2, key=itemgetter(1), reverse = True)
 f=open("result_2016.txt","w")
 for i in range(len(sorted_final)):
     f.write(sorted_final[i][0].encode('utf-8')+" : "+str(sorted_final[i][1]/float(3881))+"\n")
+f.close()
+'''
+bow_year=[]
+for a in range(len(words_all)):
+    bow_year.append(0.0)
+for i in range(len(words_all)):
+    for a in range(0,1342):
+        bow_year[i]=bow_year[i]+bow_final[a][i]
+bow_2=[]
+for i in range(len(words_all)):
+    a=[]
+    a.append(words_all[i])
+    a.append(bow_year[i])
+    bow_2.append(a)
+sorted_final = sorted(bow_2, key=itemgetter(1), reverse = True)
+#sorted_final = bow_year內的值排序後之結果
+f=open("朝日11.txt","w")
+for i in range(len(sorted_final)):
+    f.write(sorted_final[i][0].encode('utf-8')+" : "+str(sorted_final[i][1]/float(1342))+"\n")
 f.close()
